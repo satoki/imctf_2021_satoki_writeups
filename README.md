@@ -14,6 +14,8 @@ IMCTF 2021 作問者の一人 [Satoki](https://twitter.com/satoki00) と言い�
 - web
   - [DoScript🐣](web/DoScript) [? Solves]  
   - [Num-restaurant🍷](web/Num-restaurant) [? Solves]  
+- welcome
+  - [welcome🐢](welcome/welcome) [? Solves]  
 
 一つの問題につき、一つ新しい知識を持って帰っていただけるような問題にしたつもりです。  
 もう少しSolvesが多くなる予定でした(汗)。  
