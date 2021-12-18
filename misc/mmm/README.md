@@ -16,7 +16,7 @@ URL2: [http://118.27.104.46:31417](http://118.27.104.46:31417/)
 もっとうまくやりたかった...。  
 
 ## 解法
-サイトには謎のメッセージが表示されるだけであった。  
+サイトには謎のメッセージが表示されるだけである。  
 ```bash
 $ curl http://118.27.114.90:31417
 Can you get the server's traffic data?<br>Some well-known port numbers may be blocked.
