@@ -107,7 +107,7 @@ True
 これにより`price=十`、`meal=";alert(1);//`、`encoding=shift_jis`でXSSが刺さるようになる。  
 `http://160.251.83.96:31415?price=十&meal=";alert(1);//&encoding=shift_jis`にアクセスすると確認できる。  
 XSSが達成できたので、あとはアクセスしたURLを取得し、リクエストが受け取れるサーバに投げればよい。  
-リダイレクトさせようとすると、alertなどゴミがついているのでChromeではリダイレクトがうまく走らない(Firefoxでは無視される)。  
+リダイレクトさせようとすると、alertなどゴミがついているのでchromiumではリダイレクトがうまく走らない(firefoxでは無視される)。  
 alert関数を書き換えてやればうまく通る。  
 `http`が`num`に変換されるのは、スキームを記述しなければよいだけである。  
 最終的な送信クエリは以下になる。  
@@ -116,7 +116,7 @@ alert関数を書き換えてやればうまく通る。
 `encoding`: `shift_jis`  
 ※`[リクエストが受け取れるサーバ]`は[https://requestbin.com/](https://requestbin.com/)などを使うとよい。  
 これを`/admin`で送信してやる(encoding入力欄がhiddenなので注意)。  
-サーバで受け取ったbase64されたデータをでコードするとflagが得られる。  
+サーバで受け取ったbase64されたデータをデコードするとflagが得られる。  
 ![flag.png](images/flag.png)  
 
 ## imctf{1_d0n7_w4n7_70_347_5C_4nym0r3}
