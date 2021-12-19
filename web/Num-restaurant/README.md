@@ -87,7 +87,7 @@ alert(text);
 ~~~
 ```
 アクセスするURLは指定されておりchromiumのExploitでのRCEやOSコマンドインジェクションは狙えない(はず)ため、やはりXSSするしかないようである。  
-方針として5C問題を狙い、`";alert(1);//`のサニタイズ結果である`\\";alert(1);//`の前方のバックスラッシュを消すことを考える。  
+方針として5C問題を狙い、`";alert(1);//`のサニタイズ結果である`\";alert(1);//`の前方のバックスラッシュを消すことを考える。  
 例として``表";alert(1);//``などが考えられる。  
 ここで問題となるのが、`meal`にはマルチバイト文字を含めることができない点である。  
 よくソースを観察すると`var text = "￥{sanitize_price(price)}{sanitize_meal(meal)}😋Yummy!!";`であるので、`price`にマルチバイト文字を含めても同様の結果が引き起こせそうだ。  
@@ -116,7 +116,7 @@ alert関数を書き換えてやればうまく通る。
 `encoding`: `shift_jis`  
 ※`[リクエストが受け取れるサーバ]`は[https://requestbin.com/](https://requestbin.com/)などを使うとよい。  
 これを`/admin`で送信してやる(encoding入力欄がhiddenなので注意)。  
-サーバで受け取ったbase64されたデータをデコードするとflagが得られる。  
+サーバで受け取ったbase64されたデータをデコードし、URLでコードするとflagが得られる。  
 ![flag.png](images/flag.png)  
 
 ## imctf{1_d0n7_w4n7_70_347_5C_4nym0r3}
